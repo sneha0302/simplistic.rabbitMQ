@@ -49,7 +49,7 @@ jobs:
                                                              # FoD customers usually should not specify a version but rather rely on the default version
         client-auth-token: ${{ secrets.CLIENT_AUTH_TOKEN }}  # Optional, but required if ScanCentral Controller requires client authentication
     - name: Setting FQDN address
-       run: |
+      run: |
         export RUNNER_ALLOW_RUNASROOT="1"
         export AGENT_ALLOW_RUNASROOT="1"
         sudo echo "184.72.74.100 fortify.cyberxdemo.com" | sudo tee -a /etc/hosts
